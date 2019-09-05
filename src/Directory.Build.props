@@ -1,10 +1,11 @@
-<Project>
+﻿<Project>
     <PropertyGroup>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
         <LocalPackageSource>$(SolutionDir)..\.nupkg</LocalPackageSource>
         <MinVerVerbosity>normal</MinVerVerbosity>
         <CodeAnalysisRuleSet>../Default.ruleset</CodeAnalysisRuleSet>
+        <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
     </PropertyGroup>
 
     <ItemGroup>

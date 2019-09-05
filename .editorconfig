@@ -3,15 +3,13 @@
 # You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 # All files
 [*]
-indent_style         = space
+indent_style         = tab
 indent_size          = 4
 insert_final_newline = false
 charset              = utf-8-bom
 
 # Code files
 [*.{cs,csx,vb,vbx}]
-
-
 
 #Core editorconfig formatting - indentation
 
@@ -51,7 +49,6 @@ dotnet_style_predefined_type_for_locals_parameters_members                    = 
 #prefer properties not to be prefaced with this. or Me. in Visual Basic
 dotnet_style_qualification_for_property                                       = false : suggestion
 
-
 # Non-private static fields are PascalCase
 dotnet_naming_rule.non_private_static_fields_should_be_pascal_case.severity   = warning
 dotnet_naming_rule.non_private_static_fields_should_be_pascal_case.symbols    = non_private_static_fields
@@ -84,7 +81,6 @@ dotnet_naming_symbols.constants.required_modifiers                            = 
 
 dotnet_naming_style.constant_style.capitalization                             = all_upper
 
-
 # Instance fields are camelCase and start with _
 dotnet_naming_rule.instance_fields_should_be_camel_case.severity              = warning
 dotnet_naming_rule.instance_fields_should_be_camel_case.symbols               = instance_fields
@@ -104,7 +100,6 @@ dotnet_naming_symbols.interfaces.applicable_kinds                             = 
 
 dotnet_naming_style.interfaces_style.capitalization                           = pascal_case
 dotnet_naming_style.interfaces_style.required_prefix                          = I
-
 
 # Locals and parameters are camelCase
 dotnet_naming_rule.locals_should_be_camel_case.severity                       = warning
@@ -132,4 +127,3 @@ dotnet_naming_rule.members_should_be_pascal_case.style                        = 
 dotnet_naming_symbols.all_members.applicable_kinds                            = *
 
 dotnet_naming_style.pascal_case_style.capitalization                          = pascal_case
-
