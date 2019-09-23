@@ -41,11 +41,11 @@ namespace NetEmit.Platform.Stationeers.IC
 
 		public byte WorkshopFileHandle { get; set; }
 
-		public IEmitable<StringEmiter> Instructions { get; set; }
+		public IEmitable<StringEmiter>? Instructions { get; set; }
 
 		public override StringEmiter Emit()
 		{
-			Emiter.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
+			Emiter.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
 			Emiter.AppendLine("<InstructionData xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">");
 			Emiter.AppendLine($"<{nameof(DateTime)}>{DateTime}</{nameof(DateTime)}>");
 			Emiter.AppendLine($"<{nameof(GameVersion)}>{GameVersion}</{nameof(GameVersion)}>");
@@ -53,7 +53,7 @@ namespace NetEmit.Platform.Stationeers.IC
 			Emiter.AppendLine($"<{nameof(Description)}>{Description}</{nameof(Description)}>");
 			Emiter.AppendLine($"<{nameof(Author)}>{Author}</{nameof(Author)}>");
 			Emiter.AppendLine($"<{nameof(WorkshopFileHandle)}>{WorkshopFileHandle}</{nameof(WorkshopFileHandle)}>");
-			Emiter.AppendLine($"<{nameof(Instructions)}>{Instructions.Emit().Result().ToString()}</{nameof(Instructions)}>");
+			Emiter.AppendLine($"<{nameof(Instructions)}>{Instructions?.Emit().Result().ToString() ?? string.Empty}</{nameof(Instructions)}>");
 			Emiter.AppendLine("</InstructionData>");
 			return base.Emit();
 		}
